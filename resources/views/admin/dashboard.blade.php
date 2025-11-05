@@ -4,13 +4,13 @@
         'href' => route('admin.dashboard'),
     ],
     [
-        'name' => 'Pruebas',
+        'name' => '',
     ],
 ]">
 
     <x-wire-button lime label="Actions" />
     <br>
 
-    Hola desde la vista de admin
+    Dashboard Admin
 
 </x-admin-layout>

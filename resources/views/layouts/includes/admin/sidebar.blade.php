@@ -10,6 +10,12 @@
             'header' => 'Administrar página',
         ],
         [
+            'icon' => 'fas fa-tags',
+            'label' => 'Categorías',
+            'href' => route('admin.categories.index'),
+            'active' => request()->routeIs('admin.categories.*'),
+        ],
+        [
             'icon' => 'fas fa-users',
             'label' => 'Usuarios',
             'href' => route('admin.dashboard'),
