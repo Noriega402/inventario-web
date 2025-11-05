@@ -13,8 +13,19 @@ class Purchase extends Model
         'date',
         'purchase_order_id',
         'supplier_id',
-        'warehouse_id',
+        'warehouseid',
         'total',
         'observation',
     ];
+
+    // Relacion uno a muchos inversa
+    public function supplier(){
+        return $this->belongsTo(Supplier::class);
+    }
+
+    // Relacion muchos a muchos polimorfica con productos
+    public function products(){
+        return $this->morphToMany(Product::class, 'productable')->withPivot('quantity', 'price', 'subtotal')
+        ->withTimestamps();
+    }
 }
