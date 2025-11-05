@@ -17,7 +17,7 @@ return new class extends Migration
                 ->constrained()
                 ->onDelete('cascade');
 
-            $table->string('document_type')->unique();
+            $table->string('document_number')->unique();
             $table->string('name')->unique();
             $table->text('address')->default('Ciudad');
             $table->string('email')->nullable();

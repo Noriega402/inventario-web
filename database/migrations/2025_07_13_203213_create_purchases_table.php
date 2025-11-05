@@ -29,8 +29,10 @@ return new class extends Migration
                 ->constrained()
                 ->onDelete('cascade');
 
-            $table->decimal('total', 10, 2);
-            $table->text('observation')->nullable();
+            $table->decimal('total', 10, 2)
+                ->default(0);
+
+            $table->string('observation')->nullable();
             $table->timestamps();
         });
     }
